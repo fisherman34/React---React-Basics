@@ -52,3 +52,11 @@ main > h1 {
     padding-block: 10px;
     line-height: 19px;
 }
+
+/* ::marker styles the list marker of a list item. */
+/* ::marker is a CSS pseudo-element */
+/* It targets: the bullet or numbering symbol itself*/
+.facts-list > li::marker {
+    color: #61dafb;
+    font-size: 1.5rem;
+}
