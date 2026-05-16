@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+}
+
+header {
+    height: 90px;
+    background-color: #21222A;
+    padding: 30px 25px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+/* nav > img: Select every <img> element that is a DIRECT child of a <nav> element. */
+/* > matches only direct children */
+nav > img {
+    width: 40px;
+    margin-right: 7px;
+}
+
+nav > span {
+    color: #61dafb;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
