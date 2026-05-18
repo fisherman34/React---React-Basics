@@ -64,6 +64,10 @@ const pokemon = ["Bulbasaur", "Charmander", "Squirtle"]
 // -->          ["<p>Bulbasaur</p>", "<p>Charmander</p>", "<p>Squirtle</p>"]
 // Your code here
 
+/*
+`<p>${mon}</p>`中的 ` 是反引号，而不是普通引号。
+${mon}把变量的值插入字符串中。
+*/
 const  paragraphs = pokemon.map((mon) => {
   return `<p>${mon}</p>`
 })
