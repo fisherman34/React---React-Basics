@@ -24,22 +24,28 @@ export default function App() {
         <main>
             <Joke 
                 Punchline="I can't wait to see her face light up when she opens it."
+                upvotes={10}
+                isPun={true}
             />
             <Joke 
                 Setup="How did the hacker escape the police?"
                 Punchline="He just ransomware!"
+                isPun={true}
             />
             <Joke 
                 Setup="Why don't pirates travel on mountain roads?"
                 Punchline="Scurvy"
+                isPun={true}
             />
             <Joke 
                 Setup="Why do bees stay in the hive in the winter?"
                 Punchline="Swarm."
+                isPun={true}
             />
             <Joke 
                 Setup="What's the best thing about Switzerland?"
                 Punchline="I don't know, but the flag is a big plus!"
+                isPun={false}
             />
         </main>
     )
