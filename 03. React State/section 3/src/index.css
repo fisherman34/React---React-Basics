@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, sans-serif;
+    background-color: #FAFAF8;
+}
+
+/**
+header box shadow code:
+box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+*/
+
+/*
+header は：「すべての <header> タグに対して、このスタイルを適用する」という意味です。
+display: flex; header を Flexboxレイアウト に変更しています。
+justify-content: center; Flexbox の「横方向」の配置
+align-items: center; center にすると：子要素を上下中央に揃える
+gap: 11px; Flexbox の子要素同士の間隔
+*/
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 11px;
+  height: 80px;
+  background-color: white;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.10), 0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+}
+
+/*
+header > img: <header> の「直下にある <img> 要素」を選択する
+*/
+header > img {
+  width: 50px;
+}
+
+header > h1 {
+  font-weight: 400;
+}
