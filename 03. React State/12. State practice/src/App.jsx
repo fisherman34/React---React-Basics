@@ -4,11 +4,18 @@ export default function App() {
     const [count, setCount] = React.useState(0)
 
     function add() {
-        setCount(count + 1)
+    /** 
+     * prevCount => prevCount + 1 はアロー関数です。
+     * React が現在の count の値を取得する
+     * その値を prevCount に渡す
+     * prevCount + 1 を計算する
+     * その結果を新しい state にする
+     */
+        setCount(prevCount => prevCount + 1)
     }
 
     function subtract() {
-        setCount(count - 1)
+        setCount(prevCount => prevCount - 1)
     }
 
     return (
