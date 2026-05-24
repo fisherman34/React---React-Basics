@@ -8,7 +8,11 @@ export default function App() {
   const thingsElements = myFavoriteThings.map(thing => <p key={thing}>{thing}</p>)
 
   function addFavoriteThing() {
-    // We'll work on this next, nothing to do here yet.
+    /**
+     * ...prevFavThingsは スプレッド構文 (spread syntax) です。配列の中身を1つずつ展開する
+     * 例えば：const arr = ["A", "B"]を[...arr]とすると、結果は：["A", "B"]です。
+     * つまり...prevFavThingsは、現在の配列の中身をそのままコピーしています。
+    */
     setMyFavoriteThings(
         prevFavThings => [
             ...prevFavThings, 
