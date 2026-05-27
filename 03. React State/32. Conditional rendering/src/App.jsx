@@ -1,19 +1,20 @@
-import Joke from "/src/Joke"
-import jokesData from "/src/jokesData"
+import React from "react"
 
 export default function App() {
-    const jokeElements = jokesData.map(joke => {
-        return (
-            <Joke 
-                key={joke.id}
-                setup={joke.setup} 
-                punchline={joke.punchline} 
-            />
-        )
-    })
+    const [unreadMessages, setUnreadMessages] = React.useState(["a", "b"])
+    
+    /**
+     * Challenge:
+     * Only display the <h1> below if there are unread messages
+     */
+    
     return (
         <div>
-            {jokeElements}
+            {
+                unreadMessages.length > 0 && 
+                <h1>You have {unreadMessages.length} unread messages!</h1>
+            }
+
         </div>
     )
 }
