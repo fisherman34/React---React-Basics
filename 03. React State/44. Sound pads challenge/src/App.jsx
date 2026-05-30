@@ -5,8 +5,8 @@ import Pad from "./Pad"
 export default function App({ darkMode }) {
     const [pads, setPads] = React.useState(padsData)
 
-    const styles = {
-        backgroundColor: darkMode ? "#222222" : "#cccccc"
+    function toggle() {
+        console.log("Clicked!")
     }
     /**
      * key={pad.id} は、React がリストで生成された各要素を識別するための特別な属性です。
@@ -16,7 +16,7 @@ export default function App({ darkMode }) {
      * 
      */
     const buttonElements = pads.map(pad => (
-        <Pad key={pad.id} color={pad.color} on={pad.on} />
+        <Pad toggle={toggle} key={pad.id} color={pad.color} on={pad.on} />
     ))
 
     return (
