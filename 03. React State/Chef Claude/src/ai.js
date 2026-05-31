@@ -47,7 +47,8 @@ export async function getRecipeFromMistral(ingredientsArr) {
     const ingredientsString = ingredientsArr.join(", ")
     try {
         const response = await hf.chatCompletion({
-            model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
+            // model: "mistralai/Mixtral-8x7B-Instruct-v0.1",
+            model: "Qwen/Qwen2.5-7B-Instruct",
             messages: [
                 { role: "system", content: SYSTEM_PROMPT },
                 { role: "user", content: `I have ${ingredientsString}. Please give me a recipe you'd recommend I make!` },
@@ -56,6 +57,7 @@ export async function getRecipeFromMistral(ingredientsArr) {
         })
         return response.choices[0].message.content
     } catch (err) {
-        console.error(err.message)
+        console.error("Error message:", err.message)
+        console.error("Error details:", err)
     }
 }
