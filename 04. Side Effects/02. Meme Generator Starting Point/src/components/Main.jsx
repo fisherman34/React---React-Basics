@@ -13,7 +13,7 @@ export default function Main() {
             ...prevMeme,
             [name]: value,
         }))
-    }
+    } 
     return (
         <main>
             <div className="form">
