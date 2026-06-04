@@ -9,10 +9,14 @@ export default function App(props) {
      * and display it to the page. (Just replace the hard-coded
      * object inside the `<pre>` element with the data)
      */
+
+    React.useEffect(function() {
+        fetch("https://swapi.info/api/people/1")
+            .then(res => res.json())
+            // .then(data => setStarWarsData(data))
+
+    })
     
-    // fetch("https://swapi.info/api/people/1")
-    //     .then(res => res.json())
-    //     .then(data => setStarWarsData(data))
     
     return (
         <div>
